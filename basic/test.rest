@@ -1,0 +1,21 @@
+### TEST GET / website
+GET http://localhost:8000
+
+### TEST GET /dashboard website
+GET http://localhost:8000/dashboard
+
+### TEST GET /api/data website
+GET http://localhost:8000/api/data
+
+### TEST POST /api/data website
+POST http://localhost:8000/api/data
+Content-Type: application/json
+
+{
+     "name":  "ram"
+}
+
+### TEST DELETE 
+
+DELETE  http://localhost:8000/api/data
+Content-Type: application/json

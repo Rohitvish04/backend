@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD App</title>
+</head>
+<body>
+    <h1>CRUD App</h1>
+    
+    <h1>New Item</h1>
+
+    <form action="/items" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Create</button>
+    </form>
+
+    <table>
+        <% items.forEach(function(item) { %>
+
+            <tr>
+                <!-- delete is not supported in html only get and post -->
+                <form action="/" method="DELETE"> 
+                    <input type="hidden" name="id" value="<%= item.id  %>">
+                    <td><p name="name"><%= item.name %></p></td>
+                    <td><button type="submit">Delete</button></td>
+                </form>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
